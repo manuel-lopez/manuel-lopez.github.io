@@ -1,10 +1,11 @@
 ---
 layout: page
-title: About
+title: About Me
 permalink: /about/
 ---
-
+<p>  <div class="manual-content">
 I'm currently a PhD candidate at IMT Atlantique in Brest, France. My research interests include signal and image processing and stochastic modeling with applications to geosciences, oceanography and meteorology. In particular, I am interested in exploiting non-negative and sparse representations for the observation-based characterization and segmentation of geophyisical processes.
+</div></p>
 
 <div class="manual manual-title">
   Education
