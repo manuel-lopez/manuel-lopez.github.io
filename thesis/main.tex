@@ -1,0 +1,168 @@
+\documentclass[10pt]{extarticle}
+\usepackage{nopageno}
+\usepackage[a4paper, margin=2.5cm]{geometry}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,graphicx}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage{caption}
+%\usepackage{subcaption}
+\usepackage[caption=false,font=footnotesize]{subfig}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{gensymb}
+\usepackage{booktabs}
+\usepackage{dblfloatfix}
+\usepackage{fixltx2e}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+\usepackage{cite}
+%\usepackage{pdfpages}
+\usepackage{natbib}
+\usepackage{bibentry}
+\nobibliography*
+\DeclareMathSizes{24.4}{34}{30}{26}
+
+\title{Linear and Non-linear Non-negative Decomposition for the Analysis of Multi-source/Multi-parameter Ocean Dynamics Datasets}
+\author{Manuel LOPEZ RADCENCO}
+\date{\vspace{-5ex}}
+
+\floatstyle{plaintop}
+\restylefloat{table}
+
+\begin{document}
+%\section*{Rapport du doctorant sur l'état d'avancement de ses travaux : }
+\maketitle
+\section*{Thesis topic}
+
+\subsection*{Context and objectives}
+In the last few years, satellite remote sensing has produced vast amounts of observation data from a wide variety of sources. A vast array of different sensor types %(multi and hyper-spectral imaging, SAR imaging, microwave imaging, etc.) 
+allows for the observation of different terrestrial, oceanic and atmospheric geophysical and geobiochemical parameters  %(sea surface height, sea surface temperature, vegetation cover, urban development, etc.)
+at different spatio-temporal resolutions, which amounts to a huge quantity of greatly under-exploited data. In this regard, huge exploitation potential exists within these datasets, particularly for data mining and machine learning approaches, which have proved to be %, which could be used 
+useful for a wide variety of applications, ranging from high-resolution reconstruction to the spatio-temporal analysis and segmentation of system dynamics.
+To fully exploit this potential, however, a better understanding, representation and modeling of the interactions between interest variables and the processes behind these interactions is needed. Improved comprehension of variable relationships would lead to improved quality, power and accuracy of geophysical and geobiochemical process models and representations, by tackling  shortcomings associated both with the available datasets %, like the fact that no satellite sensor is capable of producing high-resolution data both in space and time,
+and with current models and representations. %, which are either too complex to allow for efficient observation-based high-resolution analysis and reconstruction or too simple to fully capture the spatio-temporal variability of the considered processes.\\
+In this context, this thesis project has two major objectives:
+\begin{enumerate}
+    \itemsep 0em 
+    \item Explore non-negative and sparse formulations (cf. \cite{parts, fevotte, ozerov, sparse}) to develop new unsupervised methods to characterize variable relationships from a representative set of observations.     
+    \item Exploit the developed methods and formulations %for the resolution of inverse problems, in order 
+    to develop new approaches for a wide range of multi-source/multi-parameter ocean remote sensing problems and applications. %, such as:\begin{itemize}
+       % \item Multi-source data fusion.
+       % \item Super-resolution of optical sensors.
+       % \item Missing data interpolation.
+      %  \item Non-parametric data assimilation.
+      %  \item High-resolution analysis, segmentation and reconstruction of system dynamics.
+    %\end{itemize}
+\end{enumerate}
+%Additionally, given the vast amounts of available data, special attention must be put into the scalability of the developed solutions, thus ensuring a smooth transition towards the treatment of massive datasets of high-dimensional variables.\\
+
+\subsection*{Scientific content}
+Variable relationship characterization is a classical problem in signal and image processing, for which several approaches % , such as linear regressions, non-linear regressions or latent class regressions models,
+have been proposed (cf. \cite{BSS,latent,tandeo}). 
+From a methodological point of view, we aim at identifying linear or non-linear transfer function dictionaries capable of accurately summarizing and representing the relationship between two interest variables. To do so, we will exploit non-negative and sparse decomposition formulations for source separation. %, for which significant advancements have been made, both in signal and image processing, during the last decade.\\
+From a mathematical point of view, the classical blind source separation problem (cf. \cite{BSS}) is generally stated as the observation-based decomposition of a signal or image $\mathbf{y}_n$ into $K$ additive components associated with different processes or sources:
+\begin{equation}
+\mathbf{y}_n=\sum_{k=1}^K\alpha_{nk}\boldsymbol{b}_k+\boldsymbol\omega_n
+\label{eq:base}
+\end{equation}
+where $\mathbf{y}_n \in \mathbb{R}^{I}$, coefficient $\alpha_{nk} \in \mathbb{R}$ quantifies the contribution of component $\boldsymbol{b}_k \in \mathbb{R}^{I}$, which corresponds to the $k$-th reference signal or image and $\boldsymbol\omega_n \in \mathbb{R}^{I}$ is a multivariate white Gaussian noise process.\\
+In this context, non-negative and sparse formulations (cf. \cite{parts, fevotte, ozerov, sparse}) will constraint the problem to allow for the development of more suitable models and to ensure the identifiability of the model from a set of observations of signals or images $\{\mathbf{y}\}_n$. \\
+Our objective is to extend model (\ref{eq:base}), and its non-negative/sparse constrained variants, to the identification and separation of linear or non-linear relationships between two variables $\mathbf{x}_n$ and $\mathbf{y}_n$ from a representative set of joint observations $\{\mathbf{x},\mathbf{y}\}_n$. The core hypothesis here lies in the validity of the following model:
+
+\begin{equation}
+\mathbf{y}_n=\sum_{k=1}^K\alpha_{nk}f_{\theta_k}(\mathbf{x}_n)+\boldsymbol\omega_n
+\label{eq:general}
+\end{equation}
+
+where $\mathbf{x}_n \in \mathbb{R}^{J}$, $\mathbf{y}_n \in \mathbb{R}^{I}$, coefficient $\alpha_{nk} \in \mathbb{R}$ quantifies the amplitude of the relationship $f_{\theta_k}(\mathbf{x}_n) \in \mathbb{R}^{I}$ for observations $\mathbf{x}_n$ and $\mathbf{y}_n$, which corresponds to the $k$-th element of the linear or non-linear transfer function dictionary, and $\boldsymbol\omega_n \in \mathbb{R}^{I}$ is a multivariate random noise process that characterizes global incertitude.\\
+Each transfer function $f_{\theta_k}$ is characterized by a set of parameters $\theta_k$, which we aim to identify along with the mixing coefficients $\alpha_{nk}$.\\
+%It should be noted that the proposed model is significantly different from classical approaches, such as linear regressions and latent class models, since the latter focus on classification and regression problems, while we consider situations involving the spatio-temporal additive superposition of relationships (or transfer functions).\\
+%Additionally, the proposed model can be used both as a multi-modal dynamical system model (if the considered variables correspond to the same physical variable at successive times) as well as an observation model (if variable $\mathbf{y}$ corresponds to the observation variable while variable $\mathbf{x}$ corresponds to the state variable of the system). Moreover, the linear version of model (\ref{eq:general}) generalizes classical regression and latent class regression models (cf. \cite{latent, tandeo}).
+%Compared to these state-of-the-art models, its key features are two-fold: first, it accounts for possibly varying magnitudes of the linear relationships; second, it explicitly evaluates the relative importance of different linear relationships.
+%\\
+%Thoughtful consideration of model \ref{eq:general} with respect to our objectives implies that special attention needs to be given to the following points:
+%\begin{enumerate}
+ %   \item The conditions under which the model is identifiable from a set of joint observations must be determined. This implies determining the required number of components and the number of observations required to ensure that all model parameters can be estimated under the considered constraints.
+ %\item Efficient algorithms for model characterization must be proposed in order to ensure their viability for cases where massive multi-dimensional datasets are involved.
+%\end{enumerate}
+
+With respect to model (\ref{eq:general}), our main objectives are:
+\begin{itemize}
+    \itemsep 0em 
+     \item Determine the conditions under which the model is identifiable from a set of joint observations. %This implies determining the required number of components and the number of observations needed to ensure that all model parameters can be estimated under the considered constraints. 
+    \item Develop efficient algorithms for model characterization and ensure their viability for cases where massive multi-dimensional datasets are involved.
+    \item Apply the proposed model for the characterization of both dynamical system models and observation models.
+    \item Apply the proposed model and algorithms to relevant ocean remote sensing problems. %(multi-source data assimilation, missing data interpolation, high-resolution segmentation and reconstruction of system dynamics, etc.)
+\end{itemize}
+\section*{State of the art and thesis topic position}
+
+\subsection*{Motivation and previous work in physical oceanography}
+As previously stated, the amount of multi-source ocean remote sensing data available has experienced considerable growth in the last few decades, which has been a key factor for more thorough analysis possibilities leading to a better understanding of upper ocean dynamics, ocean circulation and atmosphere-ocean interactions.\\
+In particular, a considerable amount of effort has been put into understanding the relationships and interactions between different oceanic physical quantities (cf. \cite{methods_1,casey,SST_SSH_1,isern,leuliette,saraceno}). 
+%Moreover, they show that, at the mesoscale level, currents stir large-scale sea surface temperature (SST) fields, which implies that upper ocean dynamics form a complex system of interactions that vary over a wide range of scales, both in space and time (cf. \cite{tandeo}).\\
+%As stated in \cite{tandeo}, sea surface height (SSH) is a depth-integrated quantity that contains information on the density structure of the water column, and captures mesoscale structures from 50 km up to a few hundred kilometers, which means that surface currents can be directly retrieved from SSH fields using the geostrophy balance. At the mesoscale level, such currents further stir large-scale sea surface temperature (SST) fields, which shows that upper ocean dynamics form a complex system of interactions that vary over a wide range of scales, both in space and time (cf. \cite{tandeo}).\\
+In \cite{tandeo}, the authors show that surface currents can be directly retrieved from SSH (Sea Surface Height)  fields using the geostrophy balance. Additionally, the existence of a sea surface dynamical mode, referred to as the SQG mode (Surface Quasi-Geostrophy), characterized by a linear transfer function between ST (Sea Surface Temperature) and SSH, has been exhibited both from theoretical and observation-driven studies (cf. \cite{tandeo,SST_SSH_1,SST_SSH_2,SST_SSH_3,SST_SSH_4,Lapeyre,Held,Klein}). Indeed, recent work points out that upper ocean dynamics may be characterized by local SSH-SST linear relationships that correspond precisely to fractional Laplacian operators (cf. \cite{tandeo,SST_SSH_1,SST_SSH_2,SST_SSH_3,SST_SSH_4,Lapeyre}), and uses this characterization to draw the following conclusions: %, which can be expressed in the Fourier domain as:
+%\begin{equation}
+%    \mathcal{F}_H(\widehat{\hbox{SSH}}) = - \gamma \,\vert \bm{k}\vert^{-2\alpha}\,\mathcal{F}_T(\widehat{\hbox{SST}})
+    %\label{eq:fourier}
+%\end{equation}
+%where ${\bm k}$ is the horizontal wavelength vector, ${\cal F}_{T}$ and ${\cal F}_{H}$ are linear filters of SST and SSH respectively and $\gamma$ is a normalization coefficient (cf. \cite{Held,tandeo}). Varying parameter $\alpha$, which controls the effective coupling between SST and SSH, leads to different classical theoretical models (cf. \cite{tandeo}). For $\alpha=1/2$, one resorts to the surface quasi-geostrophic model (cf. \cite{tandeo,Lapeyre,Klein,Held}).\\
+%Two main conclusions can be drawn from equation (\ref{eq:fourier}):
+\begin{itemize}
+\itemsep 0pt
+    \item Surface currents, given as the orthogonal gradient of the SSH, can be derived as spatial derivatives of a filtered version of the SST (cf. \cite{isern,tandeo});
+     \item A single linear transfer function may not be enough to capture the high complexity of upper ocean dynamics, since the SQG relationship assumes specific vertical mixing conditions that may not be valid anywhere or at any time (cf. \cite{Lapeyre,Cristina,isern_fontanet}). %Furthermore, when upper ocean dynamics are truly driven by SQG dynamics, parameter $\gamma$ may vary both in space and time (cf. \cite{tandeo,Lapeyre,Held}), for instance in relation to the mixed layer depth.
+\end{itemize}
+
+These findings motivated the development of new statistical observation-driven methods to combine available SSH information with other remote sensing data, such as microwave SST, or {\it in situ} data
+(cf. \cite{methods_1,methods_2,methods_3,tandeo}). Whereas \cite{isern_fontanet,Cristina} investigated Fourier-based representations of linear SSH-SST couplings, Tandeo et al. (cf. \cite{tandeo}) %relied on the fact that, for horizontal scales between 50 km and a few hundred kilometers, the upper ocean turbulence is compatible with the geostrophy turbulence theory to conclude 
+hypothesize that upper ocean dynamics may be predicted from surface density horizontal variations possibly dominated by SST fields. They exploit this idea to explore linear transfer functions between SSH and SST by introducing a multi-modal decomposition, using a latent class regression model, such that local SSH-SST relationships are described by one among a predefined number of possible linear transfer functions.\\
+%Reported results show that, indeed, a single SQG-like linear transfer function does not suffice to capture the whole mesoscale upper ocean dynamics of a particular region (cf. \cite{tandeo}).
+An important limitation of latent class regression models is that they can only account for a finite set of linear transfer functions. By contrast, the SQG mode is characterized by a single class of linear transfer functions, namely the fractional Laplacian operator $\gamma \Delta ^{1/2}$, but involves a free positive scalar parameter $\gamma$ (cf. \cite{tandeo,Lapeyre,Held}), which relates to local geophysical features (e.g., mixed layer depth). As a result, SQG-like upper ocean dynamics, characterized by continuously-varying $\gamma$ parameters, may not be well represented by latent class regression models. Such considerations lead us to consider a non-negative linear version of model (\ref{eq:general}) (linear transfer functions $f_{\theta_k}$, non-negative mixing coefficients $\alpha_{nk}$), where the relationship between SST and SSH is a non-negative linear combination of $K$ linear regressions. An observation-wise adjustable amplitude parameter $\alpha \in \mathbb{R}^+$ is used to take into account local variations in the strength of the relationships, in a manner similar to coefficient $\gamma$ in SQG dynamics.\\
+It should be noted that the considered non-negative decomposition suggests that the dynamical modes in play do not exclude each other but are rather superimposed. This is significantly different from the basis assumption made by the latent class regression model developed in \cite{tandeo}, which assumes that only one mode is active at any space-time location. Whereas previous works focused either on spatially homogeneous linear SSH-SST couplings (cf. \cite{isern_fontanet,Cristina}) or on a finite set of linear SSH-SST transfer functions (cf. \cite{tandeo}), we consider here a richer representation, accounting for all mixing possibilities between a finite set of families of linear SSH-SST relationships.\\
+To our knowledge, this thesis topic is the first study to exhibit, from an observation-driven analysis, the continuous superimposition of different dynamical modes associated with different types of SSH-SST transfer functions. We further stress that multi-modal approaches are necessary, as a single linear transfer function does not suffice to capture the complex non-stationary space-time variability of mesoscale upper ocean dynamics. Previous work rather explored regional mean transfer functions (cf. \cite{isern_fontanet,Cristina}) or latent class mixture models (cf. \cite{tandeo}), even though obtained results truly support the existence of superimposed dynamical modes, rather than mutually exclusive ones as assumed in \cite{tandeo}.
+%In real remote sensing applications, the proposed model and algorithms have led to the retrieval of an SQG-like mode that accounts for the mean SSH field and captures most of the spatio-temporal variability of the considered region (above 80\%) and a second dynamical mode that acts as a local correction to the first mode, which shows more activity in the frontal area, where the strongest sea surface currents are observed. By contrast, the application of a latent class regression model, as in \cite{tandeo}, splits the SQG-like mode into different ones, which can be interpreted as reparametrization of SQG-like mode dynamics with different mean mixing coefficient values. As such, our model provides a simple mean to locally evaluate the extent to which SQG dynamics apply.
+%This is achieved at the resolution of the considered field, typically $1/4\degree \times 1/4\degree$. By contrast, Fourier-based analyses, as in \cite{isern_fontanet,Cristina}, typically consider regional scales. These results seem more in agreement with the expected continuous shift between ideal SQG-like dynamics and non-SQG dynamics, especially with respect to the space-time variability of the upper ocean stratification and mixed layer depth (cf. \cite{tandeo,Lapeyre,Cristina,SST_SSH_2,isern_fontanet,Held,Klein}).\\
+%In conclusion, this thesis project adds to an ongoing body of work, both theoretical and practical, that shows that mesoscale upper ocean dynamics may be characterized by a local linear coupling between SST and SSH (cf. \cite{tandeo,SST_SSH_1,SST_SSH_2,SST_SSH_3,SST_SSH_4,Lapeyre}). We further stress that multi-modal approaches are necessary, as a single linear transfer function does not suffice to capture the complex non-stationary space-time variability of mesoscale upper ocean dynamics. Previous work rather explored regional mean transfer functions (cf. \cite{isern_fontanet,Cristina}) or latent class mixture models (cf. \cite{tandeo}).\\
+%Hopefully, our findings will open new research avenues both in terms of characterization of upper ocean dynamics as well as multi-source high-resolution reconstruction of sea surface currents.
+
+\subsection*{Methodological aspects and previous work in signal and image processing}
+The separation and identification of contributions associated with different types of sources or processes from multiple observations is a general problem in signal and image processing (cf. \cite{BSS}). %It provides the methodological base to derive the models and algorithms needed to accomplish the objectives presented in the previous section.\\
+Significant advances in blind source separation have been reported in the last decade with the introduction of non-negative and sparse formulations (cf. \cite{parts, fevotte, ozerov, sparse}). In the context introduced by the classical blind source separation problem formulated in (\ref{eq:base}), non-negativity constraints are used to develop part-based representations that have multiple applications, ranging from learning parts of faces or semantic features of text (cf. \cite{parts}) to audio blind source separation of convolutive mixtures (cf. \cite{fevotte}). Sparsity constraints, on the other hand, allow for dimensionality reduction and simpler representations of high-dimensional data (cf. \cite{lasso}), thus leading to the development of simpler models and representations that are easier to understand.\\
+Inspired by latent class regression models (cf. \cite{latent}) applications to satellite-derived remote sensing oceanic data, as in \cite{tandeo}, we introduce a non-negative linear version of model (\ref{eq:general}) (linear transfer functions $f_{\theta_k}$, non-negative mixing coefficients $\alpha_{nk}$), and develop algorithms for model parameter estimation. Such a model allows us to address decomposition problems involving mixed linear contributions, thus generalizing linear mixture problems involving linear regressions and latent class regression models. In particular, the non-negativity constraint provides the mean for distinguishing the form of the linear relationships between variables $\mathbf{x}_n$ and $\mathbf{y}_n$ from the magnitude of these relationships.\\
+Compared to state-of-the-art models like classical regression and latent class regression models, the key features of the proposed model are two-fold: first, it accounts for possibly varying magnitudes of the linear relationships; second, it explicitly evaluates the relative importance of different linear relationships. This is of wide interest for a variety applications such as %regression hypothesis testing, 
+transfer function identification, regime-switching dynamics, etc.\\
+%Part of our motivation comes from latent class regression models (cf. \cite{latent,tandeo}) and their application to satellite-derived remote sensing oceanic data, as in \cite{tandeo}. Inspired by some of the shortcomings of latent class regression models in this context, we proposed a generalization of latent class regression models. To do so, we extended the approach presented in \cite{tandeo}, introduced a novel model that involves a non-negative superposition of linear regressions by considering a non-negative linear version of model \ref{eq:general} (cf. \cite{NNLD}) and developed algorithms to characterize such model by both deterministic and Bayesian approaches.\\
+%As explained in the next section, part of our motivation comes from latent class regression models (cf. \cite{latent,tandeo}) and their application to satellite-derived remote sensing oceanic data, as in \cite{tandeo}. Inspired by some of the shortcomings of latent class regression models in this context, we proposed a generalization of latent class regression models. To do so, we extended the approach presented in \cite{tandeo}, introduced a novel model that involves a non-negative superposition of linear regressions by considering a non-negative linear version of model \ref{eq:general} (cf. \cite{NNLD}) and developed algorithms to characterize such model by both deterministic and Bayesian approaches.\\
+%The proposed model is:
+%\begin{equation}
+%\begin{split}
+%&\mathbf{y}_n=\sum\limits_{k=1}^K\alpha_{nk}\boldsymbol\beta_k\mathbf{x}_n+\omega_n \\
+%\text{Subject to }
+%&\begin{cases}
+%\alpha_{nk}\geq 0, &\forall \, k\in \llbracket1,K\rrbracket, \, \forall n\in \llbracket1,N\rrbracket\\
+%\left\vert \left\vert \boldsymbol\beta_k\right\vert \right\vert_F=1, &\forall \, k\in\llbracket1,K\rrbracket
+%\end{cases}
+%\end{split}
+%\label{eq:model}
+%\end{equation}
+%where $\mathbf{x}_n \in \mathbb{R}^{J}$, $\mathbf{y}_n \in \mathbb{R}^{I}$, $\alpha_{nk} \in \mathbb{R}^+$, $\boldsymbol\beta_k \in \mathbb{R}^{I \times J}$, $||\cdot||_F$ is the Frobenius norm and $\omega_n$ is a centered Gaussian noise process with covariance matrix $\boldsymbol\Sigma$ that models estimation residuals. $N$ is the total number of observations available, $K$ is the total number of components or modes in the mixture and $k$ and $n$ indicate, respectively, the current observation and mode considered.\\
+%The first model constraint derives from the desired non-negativity of coefficients $\alpha_{nk}$, while the second constraint ensures the identifiability of the problem. The non-negativity constraint provides the mean for distinguishing the form of the linear relationships between variables $\mathbf{x}_n$ and $\mathbf{y}_n$ from the magnitude of these relationships.\\
+%Model (\ref{eq:model}) allows us to address decomposition problems involving mixed linear contributions and generalizes linear mixture problems involving linear regressions and latent class regression models (cf. \cite{latent, tandeo}). The later might be viewed as a simplified version of our model (\ref{eq:model}), where mixing coefficients do not depend on index $n$ and only one mode is actually active for each sample pair. Besides, a classical linear regression resorts to model (\ref{eq:model}) with $K=1$ and $\alpha_{nk}=\alpha^*  \ \ \forall \, k\in \llbracket1,K\rrbracket, \, \forall n\in \llbracket1,N\rrbracket$.\\
+%Compared to state-of-the-art models like classical regression and latent class regression models (cf. \cite{latent, tandeo}), the key features of model (\ref{eq:model}) are two-fold: first, it accounts for possibly varying magnitudes of the linear relationships; second, it explicitly evaluates the relative importance of different linear relationships. This is of wide interest for a variety applications such as regression hypothesis testing, transfer function identification, regime-switching dynamics, etc.\\
+%As far as model identification is concerned, given the non-convex, non-linear nature of the joint minimization needed to compute both the superimposing modes and the mixing coefficients  required to characterize model (\ref{eq:model}) (cf. \cite{NNLD}), we first developed and alternating least squares (ALS) approach (cf. \cite{ALS_1, ALS_notes, ALS_3, ALS_2}).\\
+%Initialization problems with this first approach led us to develop a simplified, latent class version of model (\ref{eq:model}), inspired by a generalization of latent class models (cf. \cite{latent,tandeo}), with the intent of using its maximum likelihood parameters as initialization for model \ref{eq:model} (cf. \cite{NNLD}). We used a classic expectation-maximization (EM) algorithm (cf. \cite{EM_tutorial, EM_paper, EM_notes}), along with iterative conditional estimation (ICE) (cf. \cite{ICE_3, ICE_1, ICE_4, ICE_2}) and a direct application of the orthogonality principle (cf. \cite{orthogonal}) to characterize the simplified model. In this context, posterior probability initialization for the simplified model was performed in a binary manner by means of a simple K-means clustering on the observed variables (cf. \cite{kmeans_3, kmeans_1, kmeans_2}).\\
+%Finally, given some robustness problems found when applying the proposed method to the characterization of dynamics systems (cf. \cite{L96_1,L96_2}), the algorithms was reformulated using gradient descent (cf. \cite{armijo}) and proximal operators (cf. \cite{proximal,Moreau1965,prox}) to improve its robustness properties.\\
+Following this developments, an alternative reformulation of the problem, based on the estimation of locally linear operators representing the relationships between each observation pair $(\mathbf{x}_n,\mathbf{y}_n)$, and the subsequent decomposition of such regressions using dictionary learning approaches, is considered. We explore such formulation to address robustness issues with the original model, and to allow for the seamless integration of different constraints by selecting appropriate dictionary learning approaches, such as sparsity by means of KSVD (cf. \cite{aharon,Rubinstein}), which has already been used extensively for a wide variety of applications, including analysis sparse model learning (cf. \cite{aksvd}), transformation learning (cf. \cite{tksvd}) and face recognition (cf. \cite{fksvd}), and exists in several variants, including a non-negative variant (cf. \cite{nnksvd}) and a double spase variant (cf. \cite{double_sparse}).\\
+Finally, even though our original motivation was to overcome some drawbacks of classical models for physical oceanography applications, the proposed model and algorithms proved to have much greater capabilities. They constitute, in fact, a general tool for the analysis of variable relationships, i.e., for analyzing and synthesizing variable correlation. Such a tool would allow for the analysis, segmentation and reconstruction of the relationship between any two interest variables in any given setting, thus allowing for a deeper insight into the nature of said relationship and the processes and phenomena behind it.
+
+\begin{small}
+\section*{References}
+\renewcommand{\refname}{}
+\vspace{-0.8cm}
+\bibliographystyle{abbrv}
+\bibliography{refs}
+\end{small}
+\end{document}

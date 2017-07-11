@@ -1,0 +1,96 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+The style file: abbrv.bst
+Database file #1: refs.bib
+I was expecting a `,' or a `}'---line 39 of file refs.bib
+ : 
+ : @conference {lorenz,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 56 of file refs.bib
+ :   year = {Forthcoming},
+ :                        %2017},
+I'm skipping whatever remains of this entry
+You're missing a field name---line 67 of file refs.bib
+ :     year = {Forthcoming},
+ :                          %2017},
+I'm skipping whatever remains of this entry
+Repeated entry---line 748 of file refs.bib
+ : @article{tandeo
+ :                ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 928 of file refs.bib
+ : @article{ozerov
+ :                ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 941 of file refs.bib
+ : @article{fevotte
+ :                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 960 of file refs.bib
+ : @incollection{sparse
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1094 of file refs.bib
+ : @article{latent
+ :                ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1110 of file refs.bib
+ : @article{parts
+ :               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1124 of file refs.bib
+ : @article{lasso
+ :               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1153 of file refs.bib
+ : @misc{Lapeyre
+ :              ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1159 of file refs.bib
+ : @misc{Klein
+ :            ,
+I'm skipping whatever remains of this entry
+You've used 31 entries,
+            2118 wiz_defined-function locations,
+            712 strings with 9484 characters,
+and the built_in function-call counts, 11864 in all, are:
+= -- 1166
+> -- 588
+< -- 5
++ -- 230
+- -- 197
+* -- 964
+:= -- 1955
+add.period$ -- 98
+call.type$ -- 31
+change.case$ -- 190
+chr.to.int$ -- 0
+cite$ -- 31
+duplicate$ -- 385
+empty$ -- 896
+format.name$ -- 197
+if$ -- 2458
+int.to.chr$ -- 0
+int.to.str$ -- 31
+missing$ -- 30
+newline$ -- 163
+num.names$ -- 64
+pop$ -- 148
+preamble$ -- 2
+purify$ -- 159
+quote$ -- 0
+skip$ -- 276
+stack$ -- 0
+substring$ -- 905
+swap$ -- 70
+text.length$ -- 5
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 124
+warning$ -- 0
+while$ -- 111
+width$ -- 33
+write$ -- 352
+(There were 12 error messages)

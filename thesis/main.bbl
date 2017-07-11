@@ -1,0 +1,207 @@
+ \newcommand{\noop}[1]{}
+\begin{thebibliography}{10}
+
+\bibitem{aharon}
+M.~Aharon, M.~Elad, and A.~Bruckstein.
+\newblock \rm k -svd: An algorithm for designing overcomplete dictionaries for
+  sparse representation.
+\newblock {\em IEEE Transactions on Signal Processing}, 54(11):4311--4322, Nov
+  2006.
+
+\bibitem{nnksvd}
+M.~Aharon, M.~Elad, and A.~M. Bruckstein.
+\newblock K-svd and its non-negative variant for dictionary design.
+\newblock In {\em Proceedings of the SPIE conference wavelets}, pages 327--339,
+  2005.
+
+\bibitem{methods_1}
+M.~M. Ali, D.~Swain, and R.~A. Weller.
+\newblock Estimation of ocean subsurface thermal structure from surface
+  parameters: A neural network approach.
+\newblock {\em Geophysical Research Letters}, 31(20):n/a--n/a, 2004.
+\newblock L20308.
+
+\bibitem{casey}
+K.~S. Casey and D.~Adamec.
+\newblock Sea surface temperature and sea surface height variability in the
+  north pacific ocean from 1993 to 1999.
+\newblock {\em Journal of Geophysical Research: Oceans}, 107(C8):14--1--14--12,
+  2002.
+
+\bibitem{methods_2}
+P.~C. Chu, C.~Fan, and W.~T. Liu.
+\newblock Determination of vertical thermal structure from sea surface
+  temperature.
+\newblock {\em Journal of Atmospheric and Oceanic Technology}, 17(7):971--979,
+  2016/01/21 2000.
+
+\bibitem{latent}
+W.~DeSarbo and W.~Cron.
+\newblock A maximum likelihood methodology for clusterwise linear regression.
+\newblock {\em Journal of Classification}, 5(2):249--282, 1988.
+
+\bibitem{tksvd}
+E.~M. Eksioglu and O.~Bayir.
+\newblock K-svd meets transform learning: Transform k-svd.
+\newblock {\em IEEE Signal Processing Letters}, 21(3):347--351, March 2014.
+
+\bibitem{fevotte}
+C.~F{\'e}votte, N.~Bertin, and J.~Durrieu.
+\newblock Nonnegative matrix factorization with the itakura-saito divergence:
+  With application to music analysis.
+\newblock {\em Neural Comput.}, 21(3):793--830, Mar. 2009.
+
+\bibitem{Cristina}
+C.~Gonz{\'a}lez-Haro and J.~Isern-Fontanet.
+\newblock Global ocean current reconstruction from altimetric and microwave
+  {SST} measurements.
+\newblock {\em Journal of Geophysical Research: Oceans}, 119(6):3378--3391,
+  2014.
+
+\bibitem{SST_SSH_1}
+U.~Hausmann and A.~Czaja.
+\newblock The observed signature of mesoscale eddies in sea surface temperature
+  and the associated heat transport.
+\newblock {\em Deep Sea Research Part I: Oceanographic Research Papers}, 70:60
+  -- 72, 2012.
+
+\bibitem{Held}
+I.~M. Held, R.~T. Pierrehumbert, S.~T. Garner, and K.~L. Swanson.
+\newblock Surface quasi-geostrophic dynamics.
+\newblock {\em Journal of Fluid Mechanics}, 282:1--20, 1 1995.
+
+\bibitem{isern}
+J.~Isern-Fontanet, B.~Chapron, G.~Lapeyre, and P.~Klein.
+\newblock Potential use of microwave sea surface temperatures for the
+  estimation of ocean currents.
+\newblock {\em Geophysical Research Letters}, 33(24):n/a--n/a, 2006.
+\newblock L24608.
+
+\bibitem{SST_SSH_2}
+J.~Isern-Fontanet, G.~Lapeyre, P.~Klein, B.~Chapron, and M.~W. Hecht.
+\newblock Three-dimensional reconstruction of oceanic mesoscale currents from
+  surface information.
+\newblock {\em Journal of Geophysical Research: Oceans}, 113(C9):n/a--n/a,
+  2008.
+\newblock C09005.
+
+\bibitem{isern_fontanet}
+J.~Isern-Fontanet, M.~Shinde, and C.~Gonz{\'a}lez-Haro.
+\newblock On the transfer function between surface fields and the geostrophic
+  stream function in the {Mediterranean Sea}.
+\newblock {\em Journal of Physical Oceanography}, 44:1406--1423, 2014.
+
+\bibitem{Klein}
+P.~Klein, B.~L. Hua, G.~Lapeyre, X.~Capet, S.~{Le Gentil}, and H.~Sasaki.
+\newblock Upper ocean turbulence from high {3-D} resolution simulations.
+\newblock {\em Journal of Physical Oceanography}, 38:1748--1763, 2008.
+
+\bibitem{SST_SSH_3}
+P.~Klein, J.~Isern-Fontanet, G.~Lapeyre, G.~Roullet, E.~Danioux, B.~Chapron,
+  S.~Le~Gentil, and H.~Sasaki.
+\newblock Diagnosis of vertical velocities in the upper ocean from high
+  resolution sea surface height.
+\newblock {\em Geophysical Research Letters}, 36(12):n/a--n/a, 2009.
+\newblock L12603.
+
+\bibitem{SST_SSH_4}
+J.~H. LaCasce and A.~Mahadevan.
+\newblock Estimating subsurface horizontal and vertical velocities from
+  sea-surface temperature.
+\newblock {\em Journal of Marine Research}, 64(5):695--721,
+  2006-09-01T00:00:00.
+
+\bibitem{Lapeyre}
+G.~Lapeyre and P.~Klein.
+\newblock Dynamics of the upper oceanic layers in terms of surface
+  quasigeostrophy theory.
+\newblock {\em Journal of Physical Oceanography}, 36:165--176, 2006.
+
+\bibitem{parts}
+D.~Lee and H.~Seung.
+\newblock Learning the parts of objects by non-negative matrix factorization.
+\newblock {\em Nature}, 401(6755):788--791, Oct. 1999.
+
+\bibitem{leuliette}
+E.~W. Leuliette and J.~M. Wahr.
+\newblock Coupled pattern analysis of sea surface temperature and
+  {TOPEX/Poseidon} sea surface height.
+\newblock {\em Journal of Physical Oceanography}, 29(4):599--611, 2016/01/22
+  1999.
+
+\bibitem{ozerov}
+A.~Ozerov and C.~Févotte.
+\newblock Multichannel nonnegative matrix factorization in convolutive mixtures
+  for audio source separation.
+\newblock {\em Audio, Speech, and Language Processing, IEEE Transactions on},
+  18(3):550--563, March 2010.
+
+\bibitem{BSS}
+M.~Pal, R.~Roy, J.~Basu, and M.~Bepari.
+\newblock Blind source separation: A review and analysis.
+\newblock In {\em Oriental COCOSDA held jointly with 2013 Conference on Asian
+  Spoken Language Research and Evaluation (O-COCOSDA/CASLRE), 2013
+  International Conference}, pages 1--5, Nov 2013.
+
+\bibitem{aksvd}
+R.~Rubinstein, T.~Peleg, and M.~Elad.
+\newblock Analysis k-svd: A dictionary-learning algorithm for the analysis
+  sparse model.
+\newblock {\em IEEE Transactions on Signal Processing}, 61(3):661--677, Feb
+  2013.
+
+\bibitem{Rubinstein}
+R.~Rubinstein, M.~Zibulevsky, and M.~Elad.
+\newblock Efficient implementation of the k-svd algorithm using batch
+  orthogonal matching pursuit.
+
+\bibitem{double_sparse}
+R.~Rubinstein, M.~Zibulevsky, and M.~Elad.
+\newblock Double sparsity: Learning sparse dictionaries for sparse signal
+  approximation.
+\newblock {\em IEEE Transactions on Signal Processing}, 58(3):1553--1564, March
+  2010.
+
+\bibitem{saraceno}
+M.~Saraceno, C.~Provost, and A.~R. Piola.
+\newblock On the relationship between satellite-retrieved surface temperature
+  fronts and chlorophyll a in the western south atlantic.
+\newblock {\em Journal of Geophysical Research: Oceans}, 110(C11):n/a--n/a,
+  2005.
+\newblock C11016.
+
+\bibitem{sparse}
+K.~Stadlthanner, F.~Theis, C.~Puntonet, and E.~Lang.
+\newblock Extended sparse nonnegative matrix factorization.
+\newblock In J.~Cabestany, A.~Prieto, and F.~Sandoval, editors, {\em
+  Computational Intelligence and Bioinspired Systems}, volume 3512 of {\em
+  Lecture Notes in Computer Science}, pages 249--256. Springer Berlin
+  Heidelberg, 2005.
+
+\bibitem{tandeo}
+P.~Tandeo, B.~Chapron, S.~Ba, E.~Autret, and R.~Fablet.
+\newblock Segmentation of mesoscale ocean surface dynamics using satellite
+  {SST} and {SSH} observations.
+\newblock {\em Geoscience and Remote Sensing, IEEE Transactions on},
+  52(7):4227--4235, July 2014.
+
+\bibitem{lasso}
+R.~Tibshirani.
+\newblock Regression shrinkage and selection via the lasso.
+\newblock {\em Journal of the Royal Statistical Society, Series B},
+  58:267--288, 1994.
+
+\bibitem{methods_3}
+X.~Wu, X.-H. Yan, Y.-H. Jo, and W.~T. Liu.
+\newblock Estimation of subsurface temperature anomaly in the north atlantic
+  using a self-organizing map neural network.
+\newblock {\em Journal of Atmospheric and Oceanic Technology},
+  29(11):1675--1688, 2016/01/21 2012.
+
+\bibitem{fksvd}
+Q.~Zhang and B.~Li.
+\newblock Discriminative k-svd for dictionary learning in face recognition.
+\newblock In {\em Computer Vision and Pattern Recognition (CVPR), 2010 IEEE
+  Conference on}, pages 2691--2698, June 2010.
+
+\end{thebibliography}
