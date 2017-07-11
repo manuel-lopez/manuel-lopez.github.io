@@ -1,0 +1,53 @@
+ \newcommand{\noop}[1]{}
+\begin{thebibliography}{1}
+
+\bibitem{fablet_igarss}
+R.~Fablet, M.~Lopez-Radcenco, J.~Verron, B.~Mourre, B.~Chapron, and A.~Pascual.
+\newblock {Learning multi-tracer convolutional models for the reconstruction of
+  high-resolution SSH fields}.
+\newblock In {\em IGARSS 2017: 2017 IEEE International Geoscience and Remote
+  Sensing Symposium}, Fort Worth, Texas, USA, Forthcoming.
+
+\bibitem{NNLD}
+M.~Lopez-Radcenco, A.~Aissa-El-Bey, P.~Ailliot, R.~Fablet, and P.~Tandeo.
+\newblock {Non-negative decomposition of linear relationships: application to
+  multi-source ocean remote sensing data}.
+\newblock In {\em ICASSP 2016: 41st IEEE International Conference on Acoustics,
+  Speech and Signal Processing}, pages 4179--4183, 2016.
+
+\bibitem{esann}
+M.~Lopez-Radcenco, A.~Aissa-El-Bey, P.~Tandéo, and R.~Fablet.
+\newblock {Non-negative decomposition of geophysical dynamics}.
+\newblock In {\em ESANN’17: 25th Eur. Symp. on Artificial Neural Networks,
+  Computational Intelligence and Machine Learning}, Bruges, Belgium, April
+  2017.
+
+\bibitem{gretsi}
+M.~Lopez-Radcenco, A.~Aissa-El-Bey, P.~Tandéo, and R.~Fablet.
+\newblock {Décomposition Non-négative de Dynamiques Géophysiques}.
+\newblock In {\em GRESTSI 2017: XXVIème colloque du GRETSI}, Juan-Les-Pins,
+  France, Forthcoming.
+
+\bibitem{icip}
+M.~Lopez-Radcenco, R.~Fablet, A.~Aissa-El-Bey, and P.~Ailliot.
+\newblock {Locally-adapted convolution-based super-resolution of
+  irregularly-sampled ocean remote sensing data}.
+\newblock In {\em ICIP 2017: 2017 IEEE International Conference on Image
+  Processing}, Beijing, China, Forthcoming.
+
+\bibitem{maze_osd}
+G.~Maze, H.~Mercier, R.~Fablet, P.~Lenca, M.~Lopez~Radcenco, P.~Tandeo,
+  C.~Le~Goff, and C.~Feucher.
+\newblock Ocean heat content structure revealed by un-supervised classification
+  of hydrographic profiles.
+\newblock In {\em {OSD 2016: Ocean Sciences Meeting}}, New Orleans, United
+  States, Feb. 2016.
+
+\bibitem{maze_pio}
+G.~Maze, H.~Mercier, R.~Fablet, P.~Tandeo, M.~Lopez-Radcenco, P.~Lenca,
+  C.~Feucher, and C.~Le~Goff.
+\newblock Coherent heat patterns revealed by unsupervised classification of
+  argo temperature profiles in the north atlantic ocean.
+\newblock {\em Progress in Oceanography}, 151:275 -- 292, 2017.
+
+\end{thebibliography}
