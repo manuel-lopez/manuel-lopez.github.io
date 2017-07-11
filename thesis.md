@@ -540,8 +540,7 @@ class="ecrm-0900">&#x00A0;</span><span
 class="ecrm-0900">&#x00A0;</span><span 
 class="ecrm-0900">&#x00A0;</span></span></span><span 
 class="ecrm-0900">C.</span><span 
-class="ecrm-0900">&#x00A0;F</span><span 
-class="ecrm-0900">\E9votte,  N.</span><span 
+class="ecrm-0900">&#x00A0;Févotte,  N.</span><span 
 class="ecrm-0900">&#x00A0;Bertin,  and  J.</span><span 
 class="ecrm-0900">&#x00A0;Durrieu.    Nonnegative  matrix  factorization  with  the  itakura-saito</span>
     <span 
@@ -557,8 +556,7 @@ class="ecrm-0900">&#x00A0;</span><span
 class="ecrm-0900">&#x00A0;</span><span 
 class="ecrm-0900">&#x00A0;</span></span></span><span 
 class="ecrm-0900">C.</span><span 
-class="ecrm-0900">&#x00A0;Gonz</span><span 
-class="ecrm-0900">\E1lez-Haro  and  J.</span><span 
+class="ecrm-0900">&#x00A0;González-Haro  and  J.</span><span 
 class="ecrm-0900">&#x00A0;Isern-Fontanet.   Global  ocean  current  reconstruction  from  altimetric  and</span>
     <span 
 class="ecrm-0900">microwave SST measurements. </span><span 
@@ -767,7 +765,7 @@ class="ecrm-0900">&#x00A0;</span><span
 class="ecrm-0900">&#x00A0;</span></span></span><span 
 class="ecrm-0900">A.</span><span 
 class="ecrm-0900">&#x00A0;Ozerov and C.</span><span 
-class="ecrm-0900">&#x00A0;Fevotte.  Multichannel nonnegative matrix factorization in convolutive mixtures for</span>
+class="ecrm-0900">&#x00A0;Févotte.  Multichannel nonnegative matrix factorization in convolutive mixtures for</span>
     <span 
 class="ecrm-0900">audio source separation.  </span><span 
 class="ecti-0900">Audio, Speech, and Language Processing, IEEE Transactions on</span><span 
