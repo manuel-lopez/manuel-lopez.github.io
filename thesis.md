@@ -952,8 +952,7 @@ class="ecti-0900">and Pattern Recognition (CVPR), 2010 IEEE Conference on</span>
 class="ecrm-0900">, pages 2691&#8211;2698, June 2010.</span>
 </p>
     </div>
-    
-</body></html> 
+ 
 
                                                                                        
 
