@@ -17,5 +17,5 @@ In particular, I am currently researching the exploitaition of non-negative and 
 2015-2018 - PhD in Signal and Information Processing. IMT Atlantique (ex Télécom Bretagne). Brest, France.<br>
 2013-2015 - Research Master in Image Processing. Télécom Bretagne. Brest, France.<br>
 2013-2015 - Master of Engineering, specialization in Signal and Information Processing Systems. Télécom Bretagne. Brest, France.<br>
-2007-2013 - Bachelor of Electrical and Electroinic Engineering, specialization in Signal Processing. Facultad de Ingeniería, Universidad de la Républica (UdelaR). Montevideo, Uruguay.<br>
+2007-2013 - Bachelor of Electrical and Electronic Engineering, specialization in Signal Processing. Facultad de Ingeniería, Universidad de la Républica (UdelaR). Montevideo, Uruguay.<br>
 </div>
