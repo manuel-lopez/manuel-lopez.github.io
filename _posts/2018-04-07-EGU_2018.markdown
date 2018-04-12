@@ -6,4 +6,4 @@ categories: misc
 author: "Manuel"
 ---
 
-I'll be presenting my work on Analaog Data Assimilation with applications to SLA reconstruction from along-track nadir and pseudo-SWOT data as a poster at EGU 2018 in Vienna, Austria. I'm looking forward to meeting fellow scientists and discussing my work during the poster session on Ocean Remote Sensing (Monday 09/04 at 17:30). Come see my poster at stand X4.184. Cheers!  
+I'll be presenting my work on Analaog Data Assimilation with applications to SLA reconstruction from along-track nadir and pseudo-SWOT data as a poster at EGU 2018 in Vienna, Austria. I'm looking forward to meeting fellow scientists and discussing my work during the poster session on Ocean Remote Sensing (Monday 04/09, 17:30-19:00). Come see my poster at stand X4.184. Cheers!  
