@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "ICIP 2017"
+date:   2017-08-30 00:00:00 +0100
+categories: misc
+author: "Manuel"
+---
+
+I'll be presenting my work on Locally-adapted convolution-based super-resolution of irregularly-sampled ocean remote sensing data as a poster at ICIP 2017 in Beijing, China. I'm looking forward to meeting fellow scientists and discussing my work during the poster session on Interpolation, Super-resolution, and Mosaicing II (Wednesday 04/20, 16:30-18:00). Come see my poster at stand WQ.PB.3 on Poster Area B. Cheers!  
